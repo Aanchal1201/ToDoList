@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    background-image: radial-gradient(circle at center center, transparent 0%,rgb(0,0,0) 85%),linear-gradient(156deg, rgba(192, 192, 192,0.05) 0%, rgba(192, 192, 192,0.05) 50%,rgba(60, 60, 60,0.05) 50%, rgba(60, 60, 60,0.05) 100%),linear-gradient(305deg, rgba(97, 97, 97,0.05) 0%, rgba(97, 97, 97,0.05) 50%,rgba(52, 52, 52,0.05) 50%, rgba(52, 52, 52,0.05) 100%),linear-gradient(318deg, rgba(98, 98, 98,0.05) 0%, rgba(98, 98, 98,0.05) 50%,rgba(249, 249, 249,0.05) 50%, rgba(249, 249, 249,0.05) 100%),linear-gradient(265deg, rgba(1, 1, 1,0.05) 0%, rgba(1, 1, 1,0.05) 50%,rgba(202, 202, 202,0.05) 50%, rgba(202, 202, 202,0.05) 100%),linear-gradient(179deg, rgba(61, 61, 61,0.05) 0%, rgba(61, 61, 61,0.05) 50%,rgba(254, 254, 254,0.05) 50%, rgba(254, 254, 254,0.05) 100%),linear-gradient(254deg, rgba(237, 237, 237,0.05) 0%, rgba(237, 237, 237,0.05) 50%,rgba(147, 147, 147,0.05) 50%, rgba(147, 147, 147,0.05) 100%),linear-gradient(382deg, rgba(183, 183, 183,0.05) 0%, rgba(183, 183, 183,0.05) 50%,rgba(57, 57, 57,0.05) 50%, rgba(57, 57, 57,0.05) 100%),radial-gradient(circle at center center, hsl(351,4%,12%),hsl(351,4%,12%));
+}
+.container{
+    text-align: center;
+    margin: 10px;
+    font-family: 'Alegreya', serif;
+}
+.container input{
+    padding: 9px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 10px;
+    font-size: 16px;
+    outline: none;
+    max-width: 15rem;
+    font-family: 'Alegreya', serif;
+}
+.container h2{
+    font-family: 'Potta One', cursive;
+}
+.btn{
+    padding: 5px 18px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background: linear-gradient(120deg, #636361, #058a68, #a32d00);
+    background-size: 600% 600%;
+    outline: none;
+    animation: AnimationName 3s ease infinite;
+    color: white;
+    cursor: pointer;
+    transition: all 0.9s ease;
+    font-family: 'Alegreya', serif;
+    font-size: 18px;
+    margin: 3px;
+}
+.btn:hover{
+    padding: 5px 25px;
+}
+.delete{
+    cursor: pointer;
+    margin: 2px 7px;
+    transform: translateX(45px);
+    transition: all 0.6s ease-in;
+}
+.todo{
+    width: 90%;
+    user-select: none;
+    font-family: 'Mali', cursive;
+    max-width:700px;
+    word-break: break-word;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px auto;
+    cursor: pointer;
+    overflow: hidden;
+    background-image: radial-gradient(circle at 77% 66%, rgba(97,92,92, 0.05) 0%, rgba(97,92,92, 0.05) 9%,transparent 9%, transparent 43%,transparent 43%, transparent 100%),radial-gradient(circle at 6% 56%, rgba(97,92,92, 0.05) 0%, rgba(97,92,92, 0.05) 20%,transparent 20%, transparent 56%,transparent 56%, transparent 100%),radial-gradient(circle at 48% 45%, rgba(97,92,92, 0.05) 0%, rgba(97,92,92, 0.05) 15%,transparent 15%, transparent 85%,transparent 85%, transparent 100%),radial-gradient(circle at 89% 6%, rgba(97,92,92, 0.05) 0%, rgba(97,92,92, 0.05) 5%,transparent 5%, transparent 32%,transparent 32%, transparent 100%),radial-gradient(circle at 71% 38%, rgba(97,92,92, 0.05) 0%, rgba(97,92,92, 0.05) 14%,transparent 14%, transparent 21%,transparent 21%, transparent 100%),radial-gradient(circle at 84% 78%, rgba(97,92,92, 0.05) 0%, rgba(97,92,92, 0.05) 11%,transparent 11%, transparent 85%,transparent 85%, transparent 100%),radial-gradient(circle at 92% 72%, rgba(97,92,92, 0.05) 0%, rgba(97,92,92, 0.05) 42%,transparent 42%, transparent 51%,transparent 51%, transparent 100%),radial-gradient(circle at 73% 95%, rgba(97,92,92, 0.05) 0%, rgba(97,92,92, 0.05) 48%,transparent 48%, transparent 63%,transparent 63%, transparent 100%),radial-gradient(circle at 29% 29%, rgba(97,92,92, 0.05) 0%, rgba(97,92,92, 0.05) 24%,transparent 24%, transparent 73%,transparent 73%, transparent 100%),linear-gradient(125deg, rgba(255,254,254, 0.29),rgba(255,254,254, 0.29));
+}
+@keyframes AnimationName {
+    0%{background-position:0% 54%}
+    50%{background-position:100% 47%}
+    100%{background-position:0% 54%}
+}
+.todo:hover .delete{
+    transform: translateX(0px);
+}
+.checked{
+    text-decoration: line-through 2px black;
+    background-color: #2c250bf1;
+}
+@media only screen and (max-width:400px){
+    .container input{
+        margin: 10px 0px;
+        width: 100%;
+        max-width: 100%;
+    }
+}
